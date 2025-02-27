@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .mantine-Pagination-control[data-active="true"] {
-  border: 1px solid #007BFF !important; /* Blue border */
+  border: 1px solid #007bff !important; /* Blue border */
   background-color: #fff;
-  color: #007BFF !important; /* Blue text */
+  color: #007bff !important; /* Blue text */
   font-weight: 400 !important;
   border-radius: 4px;
 }
+
