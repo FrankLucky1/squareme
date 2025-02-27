@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-  className: string;
+  className?: string;
   onClick: () => void;
 };
 const MenuIcon = ({ className, onClick }: Props) => {
@@ -13,6 +13,7 @@ const MenuIcon = ({ className, onClick }: Props) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`${className}`}
+      data-testid="menu-icon"
       onClick={onClick}
     >
       <path

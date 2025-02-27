@@ -24,7 +24,7 @@ const TransactionCard = ({ details }: { details: TransactionDetails }) => {
         </div>
         <div className='border-b h-[40px] text-[10px] w-full flex items-center px-[8px] justify-between '>
             <label htmlFor="amount" className=''>date:</label>
-            <p>{`${formatDate(details?.date ? details?.date : "")} ${details?.time}`}</p>
+            <p>{`${formatDate(details?.date ?? "")} ${details?.time}`.trim()}</p>
         </div>
         <div className=' h-[40px] text-[10px] w-full flex items-center px-[8px] justify-between '>
             <label htmlFor="amount" className=''>status</label>
