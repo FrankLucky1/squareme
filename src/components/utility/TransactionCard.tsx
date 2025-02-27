@@ -10,7 +10,7 @@ interface TransactionDetails {
 }
 
 const TransactionCard = ({ details }: { details: TransactionDetails }) => {
-    console.log("test", details)
+  
   return (
     <div className='border w-full h-[159px] border-[#bebebe] rounded-[4px]'>
       <div className='pl-[17px] w-full flex flex-col justify-between uppercase'>
