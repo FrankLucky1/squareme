@@ -1,7 +1,7 @@
 import { useGetTransactionsQuery } from "@/lib/api";
 import React from "react";
 import TransactionCard from "./utility/TransactionCard";
-import { Loader } from "@mantine/core";
+import Loader from "./utility/Loader";
 
 const TransactionsComponent = () => {
   const { data, error, isLoading } = useGetTransactionsQuery();

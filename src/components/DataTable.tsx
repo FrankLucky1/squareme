@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import { useGetTransactionsQuery } from "@/lib/api";
-import { Checkbox, Loader, Pagination, Table } from "@mantine/core";
+import { Checkbox, Pagination, Table } from "@mantine/core";
 import { HiMiniChevronDoubleRight } from "react-icons/hi2";
+import Loader from "./utility/Loader";
 
 // Define the transaction type
 interface Transaction {

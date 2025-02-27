@@ -76,7 +76,6 @@ const defaultLabels = [
   "Nov",
   "Dec",
 ];
-//data: labels.map(() => faker.number.int({ min: 100000, max: 500000 })),
 
 const getBarThickness = () => (window.innerWidth < 768 ? 14 : 20);
 
@@ -86,7 +85,6 @@ export function BarChart({ value }: { value: ChartData[] }) {
   ) : defaultLabels
 
 
-  console.log(labels);
   const data = {
     labels ,
     datasets: [
