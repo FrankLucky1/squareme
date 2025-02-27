@@ -1,18 +1,23 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import usePathname
 import React from "react";
+import GlobeIcon from "../icons/GlobeIcon";
+import DashboardIcon from "../icons/DashboardIcon";
+import WalletIcon from "../icons/WalletIcon";
+import TransactionIcon from "../icons/TransactionIcon";
+import TransferIcon from "../icons/TransferIcon";
+import SettingsIcon from "../icons/SettingsIcon";
 
 const SideBar = () => {
   const pathname = usePathname(); // Get the current path
   const sideNav = [
-    { name: "get started", image: "/getstarted.svg", link: "/" },
-    { name: "dashboard", image: "/dashboardBlack.svg", link: "#" },
-    { name: "accounts", image: "/empty-wallet.svg", link: "#" },
-    { name: "transfers", image: "/transfers.svg", link: "#" },
-    { name: "transactions", image: "/document.svg", link: "transactions" },
-    { name: "settings", image: "/setting-2.png", link: "#" },
+    { name: "get started", icon: <GlobeIcon />, link: "/" },
+    { name: "dashboard", icon: <DashboardIcon />, link: "#" },
+    { name: "accounts", icon: <WalletIcon />, link: "#" },
+    { name: "transfers", icon: <TransferIcon />, link: "#" },
+    { name: "transactions", icon: <TransactionIcon />, link: "transactions" },
+    { name: "settings", icon: <SettingsIcon />, link: "#" },
   ];
 
   return (
@@ -23,20 +28,13 @@ const SideBar = () => {
             <li key={item.name} className="w-full h-full">
               <Link
                 href={`/${item.link}`}
-                className={`capitalize text-[15px] flex items-center justify-start gap-3 pl-[34px] py-[14.5px] w-full ${
-                  pathname === `/${item.link}` ||
-                  pathname === item.link
-                    ? "bg-[#3976E8] text-white" // Active link styling
-                    : ""
+                className={`capitalize text-[15px] flex  items-center justify-start gap-3 pl-[34px] py-[14.5px] w-full ${
+                  pathname === `/${item.link}` || pathname === item.link
+                    ? "bg-[#3976E8] text-white"
+                    : "text-[#04004D]"
                 }`}
               >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={24}
-                  height={24}
-                  className="w-[24px] h-[24px] bg-cover"
-                />
+                <span>{item.icon}</span>
                 <span>{item?.name}</span>
               </Link>
             </li>
