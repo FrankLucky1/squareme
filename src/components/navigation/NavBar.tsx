@@ -27,7 +27,6 @@ const NavBar = () => {
   return (
     <div className="flex justify-between items-center w-full max-w-[1440px] mx-auto h-20 bg-white text-black border-b border-[#E6EAEE] px-[25px] md:px-9 shadow-sm fixed">
      
-     <h1>hello</h1>
       <MenuIcon
         className="w-6 h-6 bg-cover max-sm:block hidden relative"
         onClick={handleMenuOpen}
