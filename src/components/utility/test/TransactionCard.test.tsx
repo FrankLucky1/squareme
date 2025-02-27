@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import TransactionCard from "../TransactionCard";
 import "@testing-library/jest-dom";

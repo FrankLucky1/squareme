@@ -13,9 +13,11 @@ const theme = createTheme({
 });
 
 const inter = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
+  subsets: ['latin'], 
+  weight: ['400','500' ,'600', '700'], 
+  display: "swap"
 });
+
 
 export const metadata: Metadata = {
   title: "Squareme dashboard",
@@ -32,7 +34,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme={"light"} />
       </head>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <div className="w-full h-full max-w-[1440px] mx-auto flex-col">
           <NavBar />
           <div className="w-full flex h-full pt-20">
