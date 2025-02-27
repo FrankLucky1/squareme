@@ -95,12 +95,17 @@ const DataTable: React.FC = () => {
         ? `Error: ${error.status}`
         : error.message || "An unknown error occurred";
     return (
-      <p className="text-red-500 text-lg">
-        
-        <div className="flex justify-between py-4 px-8 bg-[#ffe6d3]  text-[#ff892f]">
-          <p className="font-sans">{errorMessage}{" "}</p>
+      <div className="flex flex-col items-center justify-center max-h-[200px] max-sm:w-[80%] mt-4 p-4 sm:p-4 w-full max-w-sm mx-auto bg-[#ffe6d3] text-[#ff892f] rounded-lg shadow-lg">
+        <div className="flex flex-col space-y-2 py-4 px-6">
+          <p className="font-sans text-base sm:text-lg font-semibold">
+            {errorMessage}
+          </p>
+          <p className="text-xs sm:text-sm text-start">
+            Please try reloading the page or check your network connection. If
+            the issue persists, feel free to reach out. 😥
+          </p>
         </div>
-      </p>
+      </div>
     );
   }
 
